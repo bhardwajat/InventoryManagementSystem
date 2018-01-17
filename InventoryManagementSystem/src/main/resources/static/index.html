@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="http://localhost:9000/app.js"></script>
+</head>
+    <style>
+    /*CSS will go here.*/
+    </style>
+<body class="container" ng-app="imsApp">
+
+    <h1>Bob's Stuff Management</h1>
+    <!--Sidebar that should appear on every page -->
+    <div ng-controller="sidebarController">
+        <div>
+            <div>
+                <button ng-click="redirect('home')">Home</button>
+            </div>
+            <div>
+                <button ng-click="redirect('products')">Products</button>
+            </div>
+            <div>
+                <button ng-click="redirect('purchaseOrder')">Purchase Orders</button>
+            </div>
+            <div>
+                <button ng-click="redirect('statistics')">Retailer Performance</button>
+            </div>
+        </div>
+    </div>
+    <ui-view></ui-view>
+    
+</body>
+</html>

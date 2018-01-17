@@ -1,0 +1,103 @@
+--------------------------------
+Inventory Management System (IMS)
+<<<<<<< HEAD
+
+6/26/2017
+=======
+	
+	1603 Mar28 Java batch
+	Presentations on May 13th, 2016
+	Dev Teams:
+		-Steven, Hunter, Justin
+		-Mark, Yasmine
+		-Daniel, August
+--------------------------------
+>>>>>>> 183629ff13e7a2375dd5efbc02792bb0a1a315e8
+
+
+--------------------------------
+Notes on Requirements
+--------------------------------
+-No login/register.
+-No roles.
+-No CRUD on suppliers, retailers, products, categories, sales (at least not required).
+-We don't know/care about the suppliers' inventory (they can always fulfill purchase orders).
+-Need a way to simulate sales. (manually input data?)
+-The purpose of IMS is to give the user the ability to manage retailers.
+	-This includes ordering inventory when needed
+	 and generating reports to give the user a good understanding
+	 of how each retailer is performing - you can be creative in how you handle this.
+
+
+--------------------------------
+User Stories
+--------------------------------
+
+-As a user I can view suppliers, retailers, products, categories.
+-As a user I can view previous purchase orders (by supplier? by retailer? both? whatever makes sense).
+-As a user I can view previous sales (by retailer?).
+
+-As a user I can submit a purchase order (from a supplier, to a retailer).
+	-NOTE: each purchase order can have many products and their quantities.
+-As a user I am notified when a retailer has a product below a certain threshold.
+
+-As a user I can see the state of each retailer.
+-As a user I can view reports to give me a good understanding of each retailers' performance.
+
+
+--------------------------------
+Technologies:
+--------------------------------
+-Java 1.8
+<<<<<<< HEAD
+-Hibernate
+-PL/SQL
+-HTML/CSS/Javascript/Angular/Bootstrap/AJAX
+-JUnit & Mockito
+-log4j
+=======
+-JSPs
+-Struts
+-Hibernate
+-PL/SQL
+-JSTL/Struts Tag Libraries
+-HTML/CSS/Javascript/jQuery/Bootstrap/AJAX
+-JUnit & Mockito
+-log4j
+-Highcharts?
+-Danstrap?
+>>>>>>> 183629ff13e7a2375dd5efbc02792bb0a1a315e8
+
+
+--------------------------------
+Environment:
+--------------------------------
+-Tomcat 8
+-Oracle 11g Database
+<<<<<<< HEAD
+-Eclipse/STS/IntelliJ
+=======
+-Eclipse Mars
+>>>>>>> 183629ff13e7a2375dd5efbc02792bb0a1a315e8
+-SQL Developer
+
+
+--------------------------------
+NOTES:
+--------------------------------
+I want you to branch off of master.
+Name your branch: firstname_firstname_IMS
+		 Example: taylor_jeff_IMS
+In that branch, create a folder called: firstname_firstname_code
+		 Example: taylor_jeff_code
+Inside of that folder, on the new branch, create your project.
+It should look something like this: ..../1603_Mar28_Java/taylor_jeff_code/IMS/src/....
+I want everything managed by Git.  Commit early and often.
+Make sure you manage your DDL/DML scripts.
+  - This is especially important because you will have separate db instances.
+		-Use same username/password OR same jndi name for server managed datasource (note that you set it up differently with Tomcat)
+		-Try to keep data consistent across db instances (note that real dev isn't like this)
+
+
+		
+		

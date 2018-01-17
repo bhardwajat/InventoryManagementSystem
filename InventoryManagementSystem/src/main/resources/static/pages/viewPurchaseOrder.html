@@ -1,0 +1,29 @@
+<form ng-controller="newPurchaseOrderController">
+    <div><select ng-model="type" ng-repeat="p in products">
+        <option value="p">{{p.product_name}}</option>
+    </select></div>
+    <div><label>Quantity</label><input type="text" name="name" ng-model="quantity"></div>
+
+    <div>
+        <button ng-click="add()">Add To Order</button>
+    </div>
+</form>
+
+<div ng-controller="purchaseOrderController">
+    <table border="?" cellspacing="2" cellpadding="1" width="100%">
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Supplier</th>
+            <th>Retailer</th>
+            <th>Cost</th>
+        </tr>
+        <tr ng-repeat="po in infoPOC">
+            <td class="text-center">{{po.po_id}}</td>
+            <td class="text-center">{{po.po_timestamp}}</td>
+            <td class="text-center">{{po.po_supplier.s_name}}</td>
+            <td class="text-center">{{po.po_retailer.name}}</td>
+            <td class="text-center">{{po.po_cost | currency:"$" }}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+
+
+<div ng-controller="homeController">
+<table border="?" cellspacing=2 cellpadding=1 width=100%>
+    <tr>
+        <th>Suppliers</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    <tr ng-repeat="s in infoSupplier">
+        <td class="text-center">{{s.s_id}}</td>
+        <td class="text-center">{{s.s_name}}</td>
+        <td class="text-center">{{s.s_address.a_street}}, {{s.s_address.a_city}}, {{s.s_address.a_state}}, {{s.s_address.a_zip}}</td>
+    </tr>
+</table>
+</div>
+<div ng-controller="retailController">
+<table border="?" cellspacing=2 cellpadding=1 width=100%>
+    <tr>
+        <th>Retailers</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    <tr ng-repeat="re in infoRetail">
+        <td class="text-center">{{re.id}}</td>
+        <td class="text-center">{{re.name}}</td>
+        <td class="text-center">{{re.address.a_street}}, {{re.address.a_city}}, {{re.address.a_state}}, {{re.address.a_zip}}</td>
+    </tr>
+</table>
+</div>

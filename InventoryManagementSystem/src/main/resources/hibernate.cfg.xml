@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@projecttwo.c2cjftfyfbye.us-east-2.rds.amazonaws.com:1521:ORCL</property>
+        <property name="hibernate.connection.username">ProTwo</property>
+        <property name="hibernate.connection.password">Password$</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="com.revature.ims.domain.Address"/>
+        <mapping class="com.revature.ims.domain.Categorys"/>
+        <mapping class="com.revature.ims.domain.Products"/>
+        <mapping class="com.revature.ims.domain.PurchaseOrder"/>
+        <mapping class="com.revature.ims.domain.PurchaseOrderLine"/>
+        <mapping class="com.revature.ims.domain.Retailer"/>
+        <mapping class="com.revature.ims.domain.RetailerInventory"/>
+        <mapping class="com.revature.ims.domain.RetailerSales"/>
+        <mapping class="com.revature.ims.domain.Supplier"/>
+    </session-factory>
+</hibernate-configuration>

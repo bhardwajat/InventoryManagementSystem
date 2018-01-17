@@ -1,0 +1,21 @@
+<!--This page will display information that indicates a retailers performance -->
+<div  ng-controller="statisticsController">
+    <table border="?" cellspacing="2" cellpadding="1" width="100%">
+        <thead>
+        <tr>
+            <th>Retailer</th>
+            <th>Total Revenue to date</th>
+            <th>Revenue for past year</th>
+            <th>Revenue for past month</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="r in statsArray">
+            <td class="text-center">{{r.name}}</td>
+            <td class="text-center">{{r.total | currency:"$" }}</td>
+            <td class="text-center">{{r.year | currency:"$" }}</td>
+            <td class="text-center">{{r.month | currency:"$" }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

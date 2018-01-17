@@ -1,0 +1,20 @@
+<div  ng-controller="productController">
+    <table border="?" cellspacing="2" cellpadding="1" width="100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Supplier Price</th>
+                <th>Retailer Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in infoProds">
+                <td class="text-center">{{p.product_id}}</td>
+                <td class="text-center">{{p.product_name}}</td>
+                <td class="text-center">{{p.product_supprice | currency:"$" }}</td>
+                <td class="text-center">{{p.product_retprice | currency:"$" }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
